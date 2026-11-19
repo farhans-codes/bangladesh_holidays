@@ -12,6 +12,11 @@ Android is the primary platform. Use flutter run -d chrome for a secondary web
 preview. Calendar, Calculate and Rules share one immutable office calendar.
 The initial April 2027 range is an example. Rules are session-only.
 
+Demo CI uses Flutter 3.47.7 to reproduce the verified build. Flutter 3.50 adds
+deprecations for the existing Material imports and localization delegates;
+migrating this example is separate from the pure Dart package, which has no
+Flutter SDK dependency.
+
 Use the package's doc/manual-verification.md checklist. No Flutter test files
 are included. Colors and text roles come from theme.dart; localizations come
 from both ARB files. Generated localization files must not be edited by hand.
