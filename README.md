@@ -1,217 +1,181 @@
-# bangladesh_holidays — পরিকল্পনা
+# bangladesh_holidays
 
-> এই repo-তে এখনো কোনো code নেই। এটা package বানানোর পরিকল্পনা।
-> পরিকল্পনার তারিখ: ১৭ নভেম্বর ২০২৬
+Offline Bangladesh holidays and office-specific working-day calculations for Dart and Flutter.
 
-বাংলাদেশের সরকারি ছুটির তালিকা আর কাজের দিনের হিসাবের জন্য একটা pure Dart package, যেটা Flutter আর Dart server দুই জায়গাতেই চলবে, internet ছাড়াই।
+**Pure Dart, with no runtime dependencies**, network calls, API keys or Flutter
+dependency. Answer “when is the fifth working day?” and explain every skipped
+date. Supports Dart 3.4 or later, including Flutter applications.
 
-## কেন
+## Quick start
 
-যাচাই করে দেখা গেছে (নভেম্বর ২০২৬):
+Add the package from pub.dev:
 
-| কোথায় | অবস্থা |
-|---|---|
-| pub.dev | বাংলাদেশের ছুটির কোনো package নেই। `world_holidays` মাত্র ১০টা দেশ ধরে, বাংলাদেশ নেই। `country_holiday` Google Calendar-এর উপর নির্ভরশীল, internet লাগে। |
-| JavaScript | [`bangladesh-holidays`](https://github.com/shamsad-alam-meraj/bangladesh-holidays) — ৬ নভেম্বর ২০২৬-এ বেরিয়েছে, খুব পূর্ণাঙ্গ। **কী কী feature লাগে তার ভালো উদাহরণ।** |
-| Python | `holidays` library-তে বাংলাদেশ আছে, চাঁদ-নির্ভর ছুটি "আনুমানিক" হিসেবে। |
-| Nager.Date API | বাংলাদেশ আছে, কিন্তু ২০২৬-এ মাত্র ৭টা ছুটি, ঈদ বা পূজা নেই। |
+```sh
+dart pub add bangladesh_holidays
+```
 
-অর্থাৎ চাহিদা আছে (অন্য ভাষায় বানানো হচ্ছে), কিন্তু Flutter/Dart developer-দের জন্য কিছু নেই।
+For Flutter projects, use `flutter pub add bangladesh_holidays`. To try an
+unpublished checkout locally, use a path dependency instead:
 
-**নাম (চূড়ান্ত):** `bangladesh_holidays` — pub.dev-এ খালি আছে (১৭ নভেম্বর ২০২৬ পর্যন্ত)। পুরো দেশের নাম থাকায় খোঁজা আর বোঝা সহজ; "bd" ছোট হলেও অস্পষ্ট।
-
-**নাম কেন "holidays" হলেও বঙ্গাব্দ আছে:** বঙ্গাব্দ তারিখও এই package-এ থাকছে (নিচে আলাদা অংশ), কারণ পহেলা বৈশাখের মতো ছুটি বঙ্গাব্দ থেকেই আসে, আর ছুটির calendar-এ বাংলা তারিখ পাশাপাশি দেখানো স্বাভাবিক।
-
-## কারা ব্যবহার করবে
-
-HR আর বেতনের app, স্কুল-অফিসের app, delivery আর courier-এর সময় হিসাব, ব্যাংকিং ও fintech, calendar app, আর যেকোনো app যেখানে "পরের কাজের দিন কবে" জানা দরকার।
-
-## ডেটা
-
-### উৎস
-
-- **সরকারি ছুটি:** জনপ্রশাসন মন্ত্রণালয়ের (MoPA, mopa.gov.bd) বার্ষিক প্রজ্ঞাপন। সাধারণত বছরের শেষে পরের বছরের তালিকা আসে। JavaScript package-এর তথ্য অনুযায়ী ২০২৭-এর তালিকা ৫ নভেম্বর ২০২৬-এ প্রকাশ হয়েছে। নিজে PDF খুলে যাচাই করতে হবে।
-- **ব্যাংক ছুটি:** Bangladesh Bank আলাদা তালিকা দেয়, সরকারি তালিকা থেকে আলাদা হতে পারে। প্রথম version-এ না রাখলেও চলে।
-- **শিক্ষা প্রতিষ্ঠানের ছুটি:** আলাদা, এই package-এর বাইরে।
-
-**নিয়ম:** ডেটা সবসময় সরাসরি সরকারি প্রজ্ঞাপন থেকে নেব। অন্য package বা library-র ডেটা copy করব না; ওগুলো শুধু মিলিয়ে দেখার জন্য।
-
-### সরকারি তালিকার ছুটির ধরন
-
-- **সাধারণ ছুটি** — সবার জন্য।
-- **নির্বাহী আদেশে ছুটি** — সরকারি সিদ্ধান্তে, সাধারণত ঈদের মতো ছুটির আগে-পরে।
-- **ঐচ্ছিক ছুটি** — ধর্ম অনুযায়ী (মুসলিম, হিন্দু, খ্রিস্টান, বৌদ্ধ, ক্ষুদ্র নৃ-গোষ্ঠী), কর্মী বছরে নির্দিষ্ট কয়েকদিন নিতে পারে।
-- **আঞ্চলিক ছুটি** — যেমন চৈত্র সংক্রান্তি শুধু তিন পার্বত্য জেলায়।
-- **সাপ্তাহিক ছুটি** — শুক্র ও শনিবার।
-
-### ডেটার গঠন (প্রতিটা ছুটি)
-
-| ঘর | উদাহরণ |
-|---|---|
-| `date` | 2027-03-26 |
-| `nameEn` / `nameBn` | Independence Day / স্বাধীনতা ও জাতীয় দিবস |
-| `type` | general / executiveOrder / optional / regional |
-| `religion` | ঐচ্ছিক ছুটির জন্য: islam / hinduism / christianity / buddhism / ethnic |
-| `regions` | আঞ্চলিক ছুটির জন্য জেলার তালিকা |
-| `isEstimated` | চাঁদ দেখার উপর নির্ভরশীল কিনা |
-| `source` | কোন প্রজ্ঞাপন থেকে নেওয়া |
-
-### সংরক্ষণ
-
-- প্রতি বছরের জন্য একটা JSON file (`data/2026.json`, `data/2027.json`) — মানুষ পড়তে আর সংশোধন করতে পারবে।
-- একটা ছোট script সেই JSON থেকে Dart code বানাবে, যাতে package চালাতে কোনো file পড়া বা internet লাগে না, আর Flutter ছাড়া খাঁটি Dart-এও চলে।
-
-## API-এর নকশা (প্রাথমিক)
+```yaml
+dependencies:
+  bangladesh_holidays:
+    path: ../bangladesh_holidays
+```
 
 ```dart
-final bd = BangladeshHolidays();
+import 'package:bangladesh_holidays/bangladesh_holidays.dart';
 
-// ছুটি কিনা
-bd.isHoliday(DateTime(2027, 3, 26));            // true
-bd.holidayOn(DateTime(2027, 3, 26))?.nameBn;     // স্বাধীনতা ও জাতীয় দিবস
+final calendar = BangladeshHolidays(district: District.dhaka);
+final from = DateTime(2027, 4, 12);
+final end = DateTime(2027, 4, 19);
 
-// তালিকা
-bd.holidaysIn(2027);                             // পুরো বছর
-bd.holidaysBetween(start, end);
-bd.nextHoliday(from: DateTime.now());
+calendar.businessDaysBetween(from, end); // 4: 12, 13, 15 and 18 April.
+calendar.addBusinessDays(from, 3); // 2027-04-18; starting date excluded.
 
-// কাজের দিন (শুক্র-শনি আর ছুটি বাদ দিয়ে)
-bd.isBusinessDay(date);
-bd.addBusinessDays(date, 5);
-bd.businessDaysBetween(start, end);
+for (final day in calendar.daysBetween(from, end)) {
+  print('${day.date}: ${day.isBusinessDay} ${day.reasons}');
+}
+```
 
-// কোন বছরের ডেটা আছে
-bd.isCovered(2028);                              // false হলে ভুল উত্তর না দিয়ে জানিয়ে দেবে
+## Holiday catalog
 
-// নিয়ন্ত্রণ
-BangladeshHolidays(
-  include: {HolidayType.general, HolidayType.executiveOrder},
-  religion: Religion.hinduism,                   // কোন ঐচ্ছিক ছুটি ধরবে
-  district: 'Rangamati',                         // আঞ্চলিক ছুটি
-  overrides: [...],                              // app নিজে তারিখ ঠিক করবে (যেমন চাঁদ দেখার পর)
-  extraHolidays: [...],                          // কোম্পানির নিজস্ব ছুটি
+```dart
+calendar.holidaysIn(2027);
+calendar.holidaysInMonth(2027, 5);
+calendar.holidaysOn(DateTime(2027, 5, 20)); // Buddha Purnima AND Eid leave.
+calendar.holidaysBetween(DateTime(2027, 4, 1), DateTime(2027, 5, 1));
+calendar.nextHolidays(from: DateTime(2027, 4, 12));
+calendar.holidaysIn(2027, types: {HolidayType.optional},
+  community: HolidayCommunity.hindu);
+calendar.holidaysIn(2027, applicableOnly: true);
+```
+
+Catalog queries include unselected optional and regional holidays by default.
+Business-day methods and `isHoliday` apply the configured office rules.
+`isHoliday` does not treat a weekend alone as a holiday.
+
+Each occurrence has a stable ID, English/Bangla names, category, applicability,
+lunar uncertainty and government source. Lists preserve overlapping occurrences.
+`nextHolidays` returns all holidays on the next matching date, searches strictly
+after `from` and applies office rules by default. Use `inclusive: true` or
+`applicableOnly: false` to change those behaviors.
+
+The catalog's `district:` argument filters that query; it does not change the
+office's district. A null office district includes nationwide holidays only.
+Restricted regional and exclusion-based dates require an explicit district.
+
+## Office rules
+
+```dart
+final office = BangladeshHolidays(
+  district: District.rangamati,
+  weekendDays: {DateTime.friday},
+  selectedOptionalHolidayIds: {'2027-optional-saraswati'},
+  extraHolidays: [
+    Holiday.company(
+      id: 'company-anniversary',
+      date: DateTime(2027, 6, 1),
+      nameEn: 'Company anniversary',
+      nameBn: 'প্রতিষ্ঠাবার্ষিকী',
+    ),
+  ],
+  overrides: [
+    HolidayOverride.move(
+      holidayId: '2027-general-eid-fitr',
+      date: DateTime(2027, 3, 11),
+      isEstimated: false, // Your confirmation, not a government-data update.
+    ),
+    HolidayOverride.remove('2027-general-revolution'),
+  ],
 );
 ```
 
-**গুরুত্বপূর্ণ নীতি:** যে বছরের ডেটা নেই, সেখানে package অনুমান করে ভুল উত্তর দেবে না, স্পষ্ট জানিয়ে দেবে।
+- Defaults: Friday/Saturday off; general and executive holidays included.
+- Optional dates close the office **only when selected by ID**. Community
+  filtering is for discovery, not automatic leave approval. Employee entitlement
+  limits remain the application's responsibility.
+- Regional applicability is separate from legal category. Chaitra Sankranti is
+  general leave in three hill districts and optional for the specified community
+  elsewhere.
+- Official office-opening orders override the weekly day off only. Other active
+  holidays still close the date. Set `applyGovernmentWorkingDays: false` for
+  organizations that do not follow those orders.
+- An override affects **one occurrence**. Moving Eid does not move its
+  surrounding leave days. `originalDate` keeps the published date; `source`
+  does not endorse the caller's replacement.
+- Unknown/duplicate IDs, invalid weekdays, all seven weekdays off and invalid
+  optional selections raise `ArgumentError`. Collections are copied and immutable.
 
-## বঙ্গাব্দ তারিখ
+## Dates and coverage
 
-বাংলাদেশে ব্যবহৃত সংশোধিত বাংলা ক্যালেন্ডার (বাংলা একাডেমি, ২০১৯) অনুযায়ী ইংরেজি তারিখ থেকে বঙ্গাব্দ তারিখে রূপান্তর।
+Use Bangladesh **calendar dates**, not unconverted timestamps. Only the input
+year/month/day are read; returned dates are UTC-midnight date containers.
+Convert an instant to the Bangladesh civil date before calling the API.
+Dart normalizes invalid constructor dates, so validate text inputs first.
+
+All ranges use **[start, end)**: start included, end excluded. Empty ranges return
+no days; reversed ranges are rejected. `addBusinessDays` excludes the start,
+supports negative counts, and returns the normalized start for zero even on a holiday.
+
+Bundled years: **2026 and 2027**, reviewed **19 November 2026**.
+`CoverageException` is thrown for unsupported years, including when a forward
+or backward search reaches the coverage boundary. Missing data never silently
+becomes a working year.
 
 ```dart
-final b = Bangabda.fromDate(DateTime(2027, 4, 14));
-b.year;          // 1434
-b.month;         // 1 (বৈশাখ)
-b.day;           // 1
-b.monthNameBn;   // বৈশাখ
-b.toString();    // ১ বৈশাখ ১৪৩৪
-Bangabda.season(date);  // গ্রীষ্ম
+calendar.supportedYears; // [2026, 2027]
+calendar.isCovered(2028); // false
+calendar.coverageFor(2027).sources;
 ```
 
-**নিয়ম (লেখার আগে বাংলা একাডেমির সরকারি নির্দেশনার সাথে মিলিয়ে নিতে হবে):**
-- পহেলা বৈশাখ সবসময় ১৪ এপ্রিল।
-- বৈশাখ থেকে আশ্বিন (প্রথম ৬ মাস) ৩১ দিন করে।
-- কার্তিক থেকে মাঘ আর চৈত্র ৩০ দিন করে।
-- ফাল্গুন ২৯ দিন; ইংরেজি অধিবর্ষে (leap year) ৩০ দিন।
-- বঙ্গাব্দ বছর = ইংরেজি বছর − ৫৯৩ (১৪ এপ্রিল বা তার পরে), নইলে − ৫৯৪।
+This is a versioned MOPA snapshot, not a live feed. Lunar-dependent dates remain
+`isEstimated: true` until a later confirmation is incorporated; passing time
+alone does not remove that flag. Updates require a new package version or
+explicit application overrides.
 
-শুধু সংশোধিত বাংলাদেশি ক্যালেন্ডার; পশ্চিমবঙ্গের পঞ্জিকা-ভিত্তিক ক্যালেন্ডার এর বাইরে।
+Scope: annual general/executive/optional lists, hill-district applicability and
+national amendments in [the source ledger](https://github.com/farhans-codes/bangladesh_holidays/blob/main/doc/sources.md). Bank, school, court,
+essential-service, industry-specific and constituency-only calendars are outside
+this dataset. Check the source notice for your organization's applicability.
 
-## চাঁদ-নির্ভর ছুটি (ঈদ, শবে বরাত, শবে কদর ইত্যাদি)
+## Mobile Flutter demo
 
-- সরকারি তালিকায় এগুলোর তারিখ আগে থেকে দেওয়া থাকে, কিন্তু চাঁদ দেখার পর বদলাতে পারে।
-- এগুলোতে `isEstimated: true` থাকবে।
-- app চাইলে `overrides` দিয়ে নিজে তারিখ ঠিক করতে পারবে, package আপডেটের অপেক্ষা না করেই।
-- সরকার তারিখ নিশ্চিত করলে package-এর patch আপডেট।
+[example/flutter](https://github.com/farhans-codes/bangladesh_holidays/tree/main/example/flutter) demonstrates Calendar, Calculate and Rules
+tabs, day-by-day explanations, optional/company holidays and occurrence overrides.
+English/Bangla, light/dark themes, phone navigation and a wider-screen rail are
+included. Rules last for the current session; restarting resets the demo.
+These presentation choices belong only to the example. The package exports
+data and calculation APIs, with no widgets or theme requirements.
+Clone the repository to run the demo; it is excluded from the pub.dev archive.
 
-## বছরে একবারের আপডেট (যত সহজ করা যায়)
+```sh
+cd example/flutter
+flutter pub get
+flutter gen-l10n
+flutter run
+```
 
-1. **মনে করিয়ে দেওয়া:** GitHub Actions প্রতি বছর ১ নভেম্বর নিজে থেকে একটা issue খুলবে — "২০XX-এর ছুটি যোগ করো"।
-2. **যোগ করা:** MoPA-র প্রজ্ঞাপন দেখে নতুন বছরের JSON file লেখা (আধা ঘণ্টা থেকে এক ঘণ্টা)।
-3. **যাচাই:** script Dart code বানাবে, test চলবে (তারিখ ঠিক আছে কিনা, একই দিনে দুটো ছুটি থাকলে ঠিকঠাক কিনা)।
-4. **প্রকাশ:** নতুন minor version (যেমন 1.2.0) pub.dev-এ।
+Android is the primary demo platform; a Flutter web runner is also included.
+No Flutter tests are included. See [manual verification](https://github.com/farhans-codes/bangladesh_holidays/blob/main/doc/manual-verification.md).
 
-অন্যরাও JSON file সংশোধন করে Pull Request দিতে পারবে, তাই সব কাজ একা করতে হবে না।
+## Maintenance
 
-## ধাপে ধাপে পরিকল্পনা
+`data/*.json` is the single editable source. The generator validates IDs, real
+dates, coverage, sources, categories, bilingual names and district constraints.
+It emits immutable Dart data; no JSON is read at runtime.
 
-### v0.1 — মূল অংশ
-- [ ] MoPA থেকে ২০২৬ আর ২০২৭-এর প্রজ্ঞাপন সংগ্রহ ও JSON-এ রূপান্তর — সাধারণ, নির্বাহী আদেশে, **সব ধর্মের ঐচ্ছিক** আর আঞ্চলিক ছুটি সহ
-- [ ] ডেটার গঠন (Holiday, HolidayType, Religion)
-- [ ] `isHoliday`, `holidayOn`, `holidaysIn`, `holidaysBetween`, `nextHoliday`, `isCovered`
-- [ ] JSON থেকে Dart code বানানোর script
-- [ ] Test
+```sh
+dart pub get
+dart run tool/generate_data.dart
+dart run tool/generate_data.dart --check
+dart format --output=none --set-exit-if-changed lib tool example/bangladesh_holidays_example.dart
+dart analyze --fatal-infos
+dart run tool/verify_package.dart
+dart run example/bangladesh_holidays_example.dart
+dart pub publish --dry-run
+```
 
-### v0.2 — কাজের দিন
-- [ ] `isBusinessDay`, `addBusinessDays`, `businessDaysBetween`
-- [ ] শুক্র-শনি সাপ্তাহিক ছুটি, ঈদের লম্বা ছুটির test
-
-### v0.3 — নিয়ন্ত্রণ, বাংলা আর বঙ্গাব্দ
-- [ ] ধর্ম আর জেলা দিয়ে ঐচ্ছিক ও আঞ্চলিক ছুটি বাছাই (`religion`, `district`)
-- [ ] বঙ্গাব্দ রূপান্তর (`Bangabda.fromDate`, মাস ও ঋতুর নাম) আর সব বছরের ১৪ এপ্রিল, অধিবর্ষ ও মাসের সীমার test
-- [ ] `overrides` আর `extraHolidays`
-- [ ] বাংলা নাম আর বাংলা সংখ্যায় তারিখ
-
-### v1.0 — প্রকাশ
-- [ ] পূর্ণ README (ইংরেজিতে), API documentation
-- [ ] Flutter example app (ছুটির calendar দেখানো)
-- [ ] বার্ষিক reminder-এর GitHub Action
-- [ ] pub.dev score ১৬০/১৬০
-- [ ] repo public করা, pub.dev-এ publish
-
-### v1.1 — MCP server
-- [ ] উপরের ৬টা tool, package-এর উপর
-- [ ] Claude Desktop/Claude Code আর Cursor-এ চালিয়ে পরীক্ষা
-- [ ] README-তে সেটআপের নির্দেশনা
-- [ ] MCP registry-তে জমা
-
-### পরে (প্রয়োজন হলে)
-- [ ] Bangladesh Bank-এর ব্যাংক ছুটি
-- [ ] iCalendar (.ics) export
-- [ ] ২০২৫ বা তার আগের বছরের ডেটা
-
-## MCP server (AI agent-এর জন্য)
-
-Package তৈরি হওয়ার পর একই repo-তে একটা MCP server, যাতে Claude, ChatGPT, Cursor-এর মতো AI agent বাংলাদেশের ছুটি আর বঙ্গাব্দ তারিখ ঠিকঠাক বলতে পারে। AI নিজে থেকে প্রায়ই এগুলো ভুল বলে বা পুরনো তথ্য দেয়।
-
-**খোঁজার ফল (১৭ নভেম্বর ২০২৬):** বাংলাদেশের ছুটি বা বঙ্গাব্দের জন্য কোনো MCP server পাইনি। চাহিদার সরাসরি প্রমাণও পাইনি, তাই এটা package-এর পরে এক-দুই দিনের বাড়তি কাজ।
-
-**Tool গুলো (প্রাথমিক):**
-
-| Tool | কাজ |
-|---|---|
-| `is_holiday` | একটা তারিখ ছুটি কিনা, আর কোন ছুটি |
-| `list_holidays` | বছর বা সময়সীমার সব ছুটি, ধরন আর ধর্ম দিয়ে বাছাই |
-| `next_holiday` | পরের ছুটি কবে |
-| `business_days` | দুই তারিখের মাঝে কাজের দিন, বা "৫ কাজের দিন পরে কবে" |
-| `to_bangabda` | ইংরেজি তারিখ থেকে বঙ্গাব্দ তারিখ |
-| `coverage` | কোন বছরের ডেটা আছে (না থাকলে AI যাতে অনুমান না করে) |
-
-**নকশা:**
-- Dart দিয়ে লেখা, package-টাই ব্যবহার করবে, তাই ডেটা একই জায়গা থেকে আসবে।
-- কম্পিউটারে চলবে (stdio), কোনো server বা খরচ লাগবে না।
-- প্রতিটা উত্তরে উৎস আর "আনুমানিক" তথ্য থাকবে, যাতে AI ভুল নিশ্চয়তা না দেয়।
-- পরে MCP registry আর Claude/Cursor-এর তালিকায় জমা দেওয়া।
-
-## খোলা উৎস (Open source)
-
-এই repo-টা public হবে: package আর MCP server দুটোই open source (MIT), pub.dev-এ publish হবে। এখন private রাখা হয়েছে শুধু কাজ শুরু না হওয়া পর্যন্ত।
-
-## ঝুঁকি আর সাবধানতা
-
-- **নির্ভুলতা:** ভুল তারিখ মানে কারো বেতন বা delivery-র হিসাব ভুল। প্রতিটা তারিখের উৎস রাখতে হবে, আর README-তে স্পষ্ট disclaimer: "সরকারি প্রজ্ঞাপনই চূড়ান্ত"।
-- **সরকারি পরিবর্তন:** ২০২৫-এর মতো হঠাৎ ছুটি যোগ বা বাতিল হলে বছরের মাঝখানেও আপডেট লাগবে।
-- **প্রতিযোগিতা:** JavaScript package-এর মালিক Dart version বানাতে পারেন। তাড়াতাড়ি v0.1 বের করা ভালো।
-
-## Portfolio-তে যা দেখাবে
-
-- Dart package design আর pub.dev-এ publish করা (score, like, download সংখ্যা মাপা যায়)
-- বাস্তব সরকারি ডেটা নিয়ে কাজ, নির্ভুলতা আর রক্ষণাবেক্ষণের ব্যবস্থা
-- GitHub Actions দিয়ে স্বয়ংক্রিয় test আর বার্ষিক reminder
-
-## সিদ্ধান্ত (১৭ নভেম্বর ২০২৬)
-
-- **নাম:** `bangladesh_holidays` — সবচেয়ে অর্থপূর্ণ আর মানুষের জন্য সহজ।
-- **ঐচ্ছিক ছুটি:** সব ধর্মের ঐচ্ছিক ছুটি প্রথম version (v0.1) থেকেই ডেটায় থাকবে।
-- **বঙ্গাব্দ:** এই package-এই থাকবে।
+See [maintenance](https://github.com/farhans-codes/bangladesh_holidays/blob/main/doc/maintenance.md), [roadmap](https://github.com/farhans-codes/bangladesh_holidays/blob/main/doc/roadmap.md) and
+[changelog](https://github.com/farhans-codes/bangladesh_holidays/blob/main/CHANGELOG.md). Contributions should include the original government
+notice, changed JSON and regenerated Dart. Code is MIT licensed.
