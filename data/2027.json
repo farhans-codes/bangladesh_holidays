@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 1,
+  "year": 2027,
+  "verifiedOn": "2026-11-19",
+  "scope": "Annual MOPA general, executive and optional holidays, district applicability, and incorporated national amendments. Excludes bank, school, court, industry-specific and constituency-only calendars. Lunar-dependent dates retain the notice uncertainty; not a live feed.",
+  "sources": [
+    {
+      "id": "mopa-annual-2027",
+      "title": "MOPA annual holiday notification 2027",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/10/0bb0494a-07d8-445a-a4c4-e60fadbd406d.pdf",
+      "publishedOn": "2026-11-05"
+    }
+  ],
+  "holidays": [
+    {
+      "id": "2027-optional-english-new-year",
+      "date": "2027-01-01",
+      "nameEn": "New Year's Day",
+      "nameBn": "ইংরেজি নববর্ষ",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian"
+    },
+    {
+      "id": "2027-optional-miraj-first",
+      "date": "2027-01-06",
+      "nameEn": "Shab-e-Miraj",
+      "nameBn": "শবে মিরাজ",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "muslim"
+    },
+    {
+      "id": "2027-executiveOrder-barat",
+      "date": "2027-01-24",
+      "nameEn": "Shab-e-Barat",
+      "nameBn": "শবে বরাত",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-ash-wednesday",
+      "date": "2027-02-10",
+      "nameEn": "Ash Wednesday",
+      "nameBn": "ভস্ম বুধবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian"
+    },
+    {
+      "id": "2027-optional-saraswati",
+      "date": "2027-02-11",
+      "nameEn": "Saraswati Puja",
+      "nameBn": "সরস্বতী পূজা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-optional-maghi",
+      "date": "2027-02-20",
+      "nameEn": "Maghi Purnima",
+      "nameBn": "মাঘী পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "buddhist"
+    },
+    {
+      "id": "2027-general-language",
+      "date": "2027-02-21",
+      "nameEn": "Language Martyrs Day and International Mother Language Day",
+      "nameBn": "শহিদ দিবস ও আন্তর্জাতিক মাতৃভাষা দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-general-jumuatul-wida",
+      "date": "2027-03-05",
+      "nameEn": "Jumuatul Wida",
+      "nameBn": "জুমাতুল বিদা",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-shivaratri",
+      "date": "2027-03-06",
+      "nameEn": "Shiva Chaturdashi",
+      "nameBn": "শিবরাত্রি ব্রত",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-executiveOrder-qadr",
+      "date": "2027-03-07",
+      "nameEn": "Shab-e-Qadr",
+      "nameBn": "শবে কদর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-executiveOrder-eid-fitr-before-2",
+      "date": "2027-03-08",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-executiveOrder-eid-fitr-before-1",
+      "date": "2027-03-09",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-general-eid-fitr",
+      "date": "2027-03-10",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-executiveOrder-eid-fitr-after-1",
+      "date": "2027-03-11",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-executiveOrder-eid-fitr-after-2",
+      "date": "2027-03-12",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-optional-eid-fitr-after-3",
+      "date": "2027-03-13",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "muslim"
+    },
+    {
+      "id": "2027-optional-dol",
+      "date": "2027-03-22",
+      "nameEn": "Dol Jatra",
+      "nameBn": "দোলযাত্রা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-optional-maundy",
+      "date": "2027-03-25",
+      "nameEn": "Maundy Thursday",
+      "nameBn": "পুণ্য বৃহস্পতিবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian"
+    },
+    {
+      "id": "2027-general-independence",
+      "date": "2027-03-26",
+      "nameEn": "Independence and National Day",
+      "nameBn": "স্বাধীনতা ও জাতীয় দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-good-friday",
+      "date": "2027-03-26",
+      "nameEn": "Good Friday",
+      "nameBn": "পুণ্য শুক্রবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian"
+    },
+    {
+      "id": "2027-optional-holy-saturday",
+      "date": "2027-03-27",
+      "nameEn": "Holy Saturday",
+      "nameBn": "পুণ্য শনিবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian"
+    },
+    {
+      "id": "2027-optional-easter",
+      "date": "2027-03-28",
+      "nameEn": "Easter Sunday",
+      "nameBn": "ইস্টার সানডে",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian"
+    },
+    {
+      "id": "2027-optional-harichand",
+      "date": "2027-04-04",
+      "nameEn": "Birth Anniversary of Sri Sri Harichand Thakur",
+      "nameBn": "শ্রীশ্রী হরিচাঁদ ঠাকুরের আবির্ভাব",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-optional-baisabi-first",
+      "date": "2027-04-12",
+      "nameEn": "Baisabi and Similar Traditional Festivals",
+      "nameBn": "বৈসাবি ও অনুরূপ ঐতিহ্যবাহী উৎসব",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "indigenous",
+      "notesEn": "For eligible communities in and outside the Chittagong Hill Tracts.",
+      "notesBn": "পার্বত্য চট্টগ্রাম ও এর বাইরের সংশ্লিষ্ট ক্ষুদ্র নৃগোষ্ঠীর জন্য।"
+    },
+    {
+      "id": "2027-general-chaitra",
+      "date": "2027-04-13",
+      "nameEn": "Chaitra Sankranti",
+      "nameBn": "চৈত্র সংক্রান্তি",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "districts": [
+        "bandarban",
+        "khagrachhari",
+        "rangamati"
+      ],
+      "notesEn": "Only Rangamati, Khagrachhari and Bandarban districts.",
+      "notesBn": "শুধু রাঙামাটি, খাগড়াছড়ি ও বান্দরবান জেলায় প্রযোজ্য।"
+    },
+    {
+      "id": "2027-optional-chaitra",
+      "date": "2027-04-13",
+      "nameEn": "Chaitra Sankranti",
+      "nameBn": "চৈত্র সংক্রান্তি",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "buddhist",
+      "excludedDistricts": [
+        "bandarban",
+        "khagrachhari",
+        "rangamati"
+      ],
+      "notesEn": "Optional outside the three hill districts; requires an explicitly selected district and leave approval.",
+      "notesBn": "তিন পার্বত্য জেলার বাইরে ঐচ্ছিক; নির্দিষ্ট জেলা ও অনুমোদিত ছুটি নির্বাচন করতে হবে।"
+    },
+    {
+      "id": "2027-executiveOrder-new-year",
+      "date": "2027-04-14",
+      "nameEn": "Bangla New Year",
+      "nameBn": "বাংলা নববর্ষ",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-baisabi-second",
+      "date": "2027-04-15",
+      "nameEn": "Baisabi and Similar Traditional Festivals",
+      "nameBn": "বৈসাবি ও অনুরূপ ঐতিহ্যবাহী উৎসব",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "indigenous",
+      "notesEn": "For eligible communities in and outside the Chittagong Hill Tracts.",
+      "notesBn": "পার্বত্য চট্টগ্রাম ও এর বাইরের সংশ্লিষ্ট ক্ষুদ্র নৃগোষ্ঠীর জন্য।"
+    },
+    {
+      "id": "2027-general-may-day",
+      "date": "2027-05-01",
+      "nameEn": "May Day",
+      "nameBn": "মে দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-executiveOrder-eid-adha-before-2",
+      "date": "2027-05-15",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-executiveOrder-eid-adha-before-1",
+      "date": "2027-05-16",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-general-eid-adha",
+      "date": "2027-05-17",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-executiveOrder-eid-adha-after-1",
+      "date": "2027-05-18",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-executiveOrder-eid-adha-after-2",
+      "date": "2027-05-19",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-optional-buddha-before",
+      "date": "2027-05-19",
+      "nameEn": "Buddha Purnima",
+      "nameBn": "বুদ্ধ পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "buddhist",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2027-executiveOrder-eid-adha-after-3",
+      "date": "2027-05-20",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2027-general-buddha",
+      "date": "2027-05-20",
+      "nameEn": "Buddha Purnima",
+      "nameBn": "বুদ্ধ পূর্ণিমা",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-buddha-after",
+      "date": "2027-05-21",
+      "nameEn": "Buddha Purnima",
+      "nameBn": "বুদ্ধ পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "buddhist",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2027-optional-eid-adha-after-4",
+      "date": "2027-05-21",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "muslim"
+    },
+    {
+      "id": "2027-executiveOrder-ashura",
+      "date": "2027-06-16",
+      "nameEn": "Ashura",
+      "nameBn": "আশুরা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-ashari",
+      "date": "2027-07-18",
+      "nameEn": "Ashari Purnima",
+      "nameBn": "আষাঢ়ী পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "buddhist"
+    },
+    {
+      "id": "2027-optional-akheri",
+      "date": "2027-07-28",
+      "nameEn": "Akheri Chahar Somba",
+      "nameBn": "আখেরি চাহার সোম্বা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "muslim"
+    },
+    {
+      "id": "2027-general-july-uprising",
+      "date": "2027-08-05",
+      "nameEn": "July Mass Uprising Day",
+      "nameBn": "জুলাই গণঅভ্যুত্থান দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-general-milad",
+      "date": "2027-08-15",
+      "nameEn": "Eid-e-Miladunnabi",
+      "nameBn": "ঈদে মিলাদুন্নবী",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-general-janmashtami",
+      "date": "2027-08-25",
+      "nameEn": "Janmashtami",
+      "nameBn": "জন্মাষ্টমী",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-fateha",
+      "date": "2027-09-13",
+      "nameEn": "Fateha-e-Yazdaham",
+      "nameBn": "ফাতেহা ই ইয়াজদাহম",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "muslim"
+    },
+    {
+      "id": "2027-optional-madhu",
+      "date": "2027-09-15",
+      "nameEn": "Madhu Purnima",
+      "nameBn": "মধু পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "buddhist"
+    },
+    {
+      "id": "2027-optional-mahalaya",
+      "date": "2027-09-30",
+      "nameEn": "Mahalaya",
+      "nameBn": "মহালয়া",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-optional-durga-sasthi",
+      "date": "2027-10-07",
+      "nameEn": "Durga Puja (Sasthi)",
+      "nameBn": "দুর্গাপূজা (ষষ্ঠী)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-optional-durga-ashtami",
+      "date": "2027-10-08",
+      "nameEn": "Durga Puja (Ashtami)",
+      "nameBn": "দুর্গাপূজা (অষ্টমী)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-executiveOrder-durga-navami",
+      "date": "2027-10-09",
+      "nameEn": "Durga Puja (Navami)",
+      "nameBn": "দুর্গাপূজা (নবমী)",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-general-durga-dashami",
+      "date": "2027-10-10",
+      "nameEn": "Durga Puja (Bijoya Dashami)",
+      "nameBn": "দুর্গাপূজা (বিজয়া দশমী)",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-lakshmi",
+      "date": "2027-10-14",
+      "nameEn": "Lakshmi Puja",
+      "nameBn": "লক্ষ্মীপূজা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-optional-prabarana",
+      "date": "2027-10-14",
+      "nameEn": "Prabarana Purnima",
+      "nameBn": "প্রবারণা পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "buddhist"
+    },
+    {
+      "id": "2027-optional-shyama",
+      "date": "2027-10-28",
+      "nameEn": "Shyama Puja",
+      "nameBn": "শ্যামাপূজা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "hindu"
+    },
+    {
+      "id": "2027-general-revolution",
+      "date": "2027-11-07",
+      "nameEn": "National Revolution and Solidarity Day",
+      "nameBn": "জাতীয় বিপ্লব ও সংহতি দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-general-victory",
+      "date": "2027-12-16",
+      "nameEn": "Victory Day",
+      "nameBn": "বিজয় দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-christmas-before",
+      "date": "2027-12-24",
+      "nameEn": "Christmas Day",
+      "nameBn": "যিশু খ্রিষ্টের জন্মদিন (বড়দিন)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2027-general-christmas",
+      "date": "2027-12-25",
+      "nameEn": "Christmas Day",
+      "nameBn": "যিশু খ্রিষ্টের জন্মদিন (বড়দিন)",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2027"
+    },
+    {
+      "id": "2027-optional-christmas-after",
+      "date": "2027-12-26",
+      "nameEn": "Christmas Day",
+      "nameBn": "যিশু খ্রিষ্টের জন্মদিন (বড়দিন)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2027",
+      "community": "christian",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2027-optional-miraj-second",
+      "date": "2027-12-26",
+      "nameEn": "Shab-e-Miraj",
+      "nameBn": "শবে মিরাজ",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2027",
+      "community": "muslim"
+    }
+  ],
+  "workingDays": []
+}

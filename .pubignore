@@ -1,0 +1,8 @@
+.github/
+.impeccable/
+PRODUCT.md
+DESIGN.md
+example/flutter/
+build/
+coverage/
+doc/api/

@@ -1,0 +1,58 @@
+name: Validate package and demo
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  dart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+      - run: dart pub get
+      - run: dart run tool/generate_data.dart --check
+      - run: dart format --output=none --set-exit-if-changed lib tool example/bangladesh_holidays_example.dart
+      - run: dart analyze --fatal-infos
+      - run: dart run tool/verify_package.dart
+      - run: dart run example/bangladesh_holidays_example.dart
+      - run: dart pub publish --dry-run
+  minimum-sdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: '3.4.4'
+      - name: Verify the public API as a consumer
+        run: |
+          mkdir "$RUNNER_TEMP/holiday-consumer"
+          cat > "$RUNNER_TEMP/holiday-consumer/pubspec.yaml" <<EOF
+          name: holiday_consumer
+          publish_to: none
+          environment:
+            sdk: '>=3.4.0 <4.0.0'
+          dependencies:
+            bangladesh_holidays:
+              path: '$GITHUB_WORKSPACE'
+          EOF
+          cp tool/verify_package.dart "$RUNNER_TEMP/holiday-consumer/check.dart"
+          cd "$RUNNER_TEMP/holiday-consumer"
+          dart pub get
+          dart run check.dart
+  flutter:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: example/flutter
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter gen-l10n
+      - run: dart format --output=none --set-exit-if-changed lib
+      - run: flutter analyze --fatal-infos
+      - run: flutter build web

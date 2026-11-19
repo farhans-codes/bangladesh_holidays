@@ -1,0 +1,14 @@
+name: bangladesh_holidays
+description: Offline Bangladesh public holidays and business-day calculations with official sources and configurable office calendars.
+version: 0.1.0
+repository: https://github.com/farhans-codes/bangladesh_holidays
+issue_tracker: https://github.com/farhans-codes/bangladesh_holidays/issues
+topics:
+  - bangladesh
+  - holidays
+  - calendar
+  - business-days
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+dev_dependencies:
+  lints: ^6.0.0

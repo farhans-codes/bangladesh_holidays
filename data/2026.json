@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "year": 2026,
+  "verifiedOn": "2026-11-19",
+  "scope": "Annual MOPA general, executive and optional holidays, district applicability, and incorporated national amendments. Excludes bank, school, court, industry-specific and constituency-only calendars. Lunar-dependent dates retain the notice uncertainty; not a live feed.",
+  "sources": [
+    {
+      "id": "mopa-annual-2026",
+      "title": "MOPA annual holiday notification 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2024/12/209c6283d9234a0fa8f1f30b90068b57.pdf",
+      "publishedOn": "2025-11-09"
+    },
+    {
+      "id": "mopa-election-2026",
+      "title": "MOPA election 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/0/947ab09e-f78b-48a7-ab04-0f65ef8c676b.pdf",
+      "publishedOn": "2026-01-25"
+    },
+    {
+      "id": "mopa-election-amendment-2026",
+      "title": "MOPA election amendment 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/1/073743e4-f377-4abe-8f1a-034c66bf22fd.pdf",
+      "publishedOn": "2026-02-08"
+    },
+    {
+      "id": "mopa-eid-fitr-extra-2026",
+      "title": "MOPA eid fitr extra 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/2/3032280b-9b19-46aa-ae93-66afb17b0d33.pdf",
+      "publishedOn": "2026-03-08"
+    },
+    {
+      "id": "mopa-chaitra-2026",
+      "title": "MOPA chaitra 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/3/7d914619-f945-440b-9713-f57105930187.pdf",
+      "publishedOn": "2026-04-05"
+    },
+    {
+      "id": "mopa-eid-adha-extra-2026",
+      "title": "MOPA eid adha extra 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/4/1edcd3b7-92bb-4fd6-858f-23a258774209.pdf",
+      "publishedOn": "2026-05-14"
+    },
+    {
+      "id": "mopa-working-october-2026",
+      "title": "MOPA working october 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/9/9928633c-a89f-44c5-bdea-3835e9445a5e.pdf",
+      "publishedOn": "2026-10-07"
+    },
+    {
+      "id": "mopa-november-2026",
+      "title": "MOPA november 2026",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mopa/2026/9/c2238493-30af-4bf7-b93e-fcd1506024dd.pdf",
+      "publishedOn": "2026-10-07"
+    }
+  ],
+  "holidays": [
+    {
+      "id": "2026-optional-english-new-year",
+      "date": "2026-01-01",
+      "nameEn": "New Year's Day",
+      "nameBn": "ইংরেজি নববর্ষ",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian"
+    },
+    {
+      "id": "2026-optional-miraj",
+      "date": "2026-01-17",
+      "nameEn": "Shab-e-Miraj",
+      "nameBn": "শবে মিরাজ",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "muslim"
+    },
+    {
+      "id": "2026-optional-saraswati",
+      "date": "2026-01-23",
+      "nameEn": "Saraswati Puja",
+      "nameBn": "সরস্বতী পূজা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-optional-maghi",
+      "date": "2026-02-01",
+      "nameEn": "Maghi Purnima",
+      "nameBn": "মাঘী পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "buddhist"
+    },
+    {
+      "id": "2026-executiveOrder-barat",
+      "date": "2026-02-04",
+      "nameEn": "Shab-e-Barat",
+      "nameBn": "শবে বরাত",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-executiveOrder-election-first",
+      "date": "2026-02-11",
+      "nameEn": "National Parliamentary Election and Referendum",
+      "nameBn": "জাতীয় সংসদ নির্বাচন ও গণভোট",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-election-2026"
+    },
+    {
+      "id": "2026-executiveOrder-election-second",
+      "date": "2026-02-12",
+      "nameEn": "National Parliamentary Election and Referendum",
+      "nameBn": "জাতীয় সংসদ নির্বাচন ও গণভোট",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-election-2026"
+    },
+    {
+      "id": "2026-optional-shivaratri",
+      "date": "2026-02-15",
+      "nameEn": "Shiva Chaturdashi",
+      "nameBn": "শিবরাত্রি ব্রত",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-optional-ash-wednesday",
+      "date": "2026-02-18",
+      "nameEn": "Ash Wednesday",
+      "nameBn": "ভস্ম বুধবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian"
+    },
+    {
+      "id": "2026-general-language",
+      "date": "2026-02-21",
+      "nameEn": "Language Martyrs Day and International Mother Language Day",
+      "nameBn": "শহিদ দিবস ও আন্তর্জাতিক মাতৃভাষা দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-dol",
+      "date": "2026-03-03",
+      "nameEn": "Dol Jatra",
+      "nameBn": "দোলযাত্রা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-executiveOrder-qadr",
+      "date": "2026-03-17",
+      "nameEn": "Shab-e-Qadr",
+      "nameBn": "শবে কদর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-harichand",
+      "date": "2026-03-17",
+      "nameEn": "Birth Anniversary of Sri Sri Harichand Thakur",
+      "nameBn": "শ্রীশ্রী হরিচাঁদ ঠাকুরের আবির্ভাব",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-executiveOrder-eid-fitr-additional",
+      "date": "2026-03-18",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-eid-fitr-extra-2026"
+    },
+    {
+      "id": "2026-executiveOrder-eid-fitr-before-2",
+      "date": "2026-03-19",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-executiveOrder-eid-fitr-before-1",
+      "date": "2026-03-20",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-general-jumuatul-wida",
+      "date": "2026-03-20",
+      "nameEn": "Jumuatul Wida",
+      "nameBn": "জুমাতুল বিদা",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-general-eid-fitr",
+      "date": "2026-03-21",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-executiveOrder-eid-fitr-after-1",
+      "date": "2026-03-22",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-executiveOrder-eid-fitr-after-2",
+      "date": "2026-03-23",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-optional-eid-fitr-after-3",
+      "date": "2026-03-24",
+      "nameEn": "Eid-ul-Fitr",
+      "nameBn": "ঈদুল ফিতর",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "muslim"
+    },
+    {
+      "id": "2026-general-independence",
+      "date": "2026-03-26",
+      "nameEn": "Independence and National Day",
+      "nameBn": "স্বাধীনতা ও জাতীয় দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-maundy",
+      "date": "2026-04-02",
+      "nameEn": "Maundy Thursday",
+      "nameBn": "পুণ্য বৃহস্পতিবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian"
+    },
+    {
+      "id": "2026-optional-good-friday",
+      "date": "2026-04-03",
+      "nameEn": "Good Friday",
+      "nameBn": "পুণ্য শুক্রবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian"
+    },
+    {
+      "id": "2026-optional-holy-saturday",
+      "date": "2026-04-04",
+      "nameEn": "Holy Saturday",
+      "nameBn": "পুণ্য শনিবার",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian"
+    },
+    {
+      "id": "2026-optional-easter",
+      "date": "2026-04-05",
+      "nameEn": "Easter Sunday",
+      "nameBn": "ইস্টার সানডে",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian"
+    },
+    {
+      "id": "2026-optional-baisabi-first",
+      "date": "2026-04-12",
+      "nameEn": "Baisabi and Similar Traditional Festivals",
+      "nameBn": "বৈসাবি ও অনুরূপ ঐতিহ্যবাহী উৎসব",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "indigenous",
+      "notesEn": "For eligible communities in and outside the Chittagong Hill Tracts.",
+      "notesBn": "পার্বত্য চট্টগ্রাম ও এর বাইরের সংশ্লিষ্ট ক্ষুদ্র নৃগোষ্ঠীর জন্য।"
+    },
+    {
+      "id": "2026-general-chaitra",
+      "date": "2026-04-13",
+      "nameEn": "Chaitra Sankranti",
+      "nameBn": "চৈত্র সংক্রান্তি",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-chaitra-2026",
+      "districts": [
+        "bandarban",
+        "khagrachhari",
+        "rangamati"
+      ],
+      "notesEn": "Only Rangamati, Khagrachhari and Bandarban districts.",
+      "notesBn": "শুধু রাঙামাটি, খাগড়াছড়ি ও বান্দরবান জেলায় প্রযোজ্য।"
+    },
+    {
+      "id": "2026-optional-chaitra",
+      "date": "2026-04-13",
+      "nameEn": "Chaitra Sankranti",
+      "nameBn": "চৈত্র সংক্রান্তি",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-chaitra-2026",
+      "community": "buddhist",
+      "excludedDistricts": [
+        "bandarban",
+        "khagrachhari",
+        "rangamati"
+      ],
+      "notesEn": "Optional outside the three hill districts; requires an explicitly selected district and leave approval.",
+      "notesBn": "তিন পার্বত্য জেলার বাইরে ঐচ্ছিক; নির্দিষ্ট জেলা ও অনুমোদিত ছুটি নির্বাচন করতে হবে।"
+    },
+    {
+      "id": "2026-executiveOrder-new-year",
+      "date": "2026-04-14",
+      "nameEn": "Bangla New Year",
+      "nameBn": "বাংলা নববর্ষ",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-baisabi-second",
+      "date": "2026-04-15",
+      "nameEn": "Baisabi and Similar Traditional Festivals",
+      "nameBn": "বৈসাবি ও অনুরূপ ঐতিহ্যবাহী উৎসব",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "indigenous",
+      "notesEn": "For eligible communities in and outside the Chittagong Hill Tracts.",
+      "notesBn": "পার্বত্য চট্টগ্রাম ও এর বাইরের সংশ্লিষ্ট ক্ষুদ্র নৃগোষ্ঠীর জন্য।"
+    },
+    {
+      "id": "2026-optional-buddha-before",
+      "date": "2026-04-30",
+      "nameEn": "Buddha Purnima",
+      "nameBn": "বুদ্ধ পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "buddhist",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2026-general-buddha",
+      "date": "2026-05-01",
+      "nameEn": "Buddha Purnima",
+      "nameBn": "বুদ্ধ পূর্ণিমা",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-general-may-day",
+      "date": "2026-05-01",
+      "nameEn": "May Day",
+      "nameBn": "মে দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-buddha-after",
+      "date": "2026-05-02",
+      "nameEn": "Buddha Purnima",
+      "nameBn": "বুদ্ধ পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "buddhist",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2026-executiveOrder-eid-adha-additional",
+      "date": "2026-05-25",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-eid-adha-extra-2026"
+    },
+    {
+      "id": "2026-executiveOrder-eid-adha-before-2",
+      "date": "2026-05-26",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-executiveOrder-eid-adha-before-1",
+      "date": "2026-05-27",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-general-eid-adha",
+      "date": "2026-05-28",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-executiveOrder-eid-adha-after-1",
+      "date": "2026-05-29",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-executiveOrder-eid-adha-after-2",
+      "date": "2026-05-30",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-executiveOrder-eid-adha-after-3",
+      "date": "2026-05-31",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "notesEn": "Additional day around the festival.",
+      "notesBn": "উৎসবের আগে বা পরের অতিরিক্ত ছুটি।"
+    },
+    {
+      "id": "2026-optional-eid-adha-after-4",
+      "date": "2026-06-01",
+      "nameEn": "Eid-ul-Adha",
+      "nameBn": "ঈদুল আজহা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "muslim"
+    },
+    {
+      "id": "2026-executiveOrder-ashura",
+      "date": "2026-06-26",
+      "nameEn": "Ashura",
+      "nameBn": "আশুরা",
+      "type": "executiveOrder",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-ashari",
+      "date": "2026-07-29",
+      "nameEn": "Ashari Purnima",
+      "nameBn": "আষাঢ়ী পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "buddhist"
+    },
+    {
+      "id": "2026-general-july-uprising",
+      "date": "2026-08-05",
+      "nameEn": "July Mass Uprising Day",
+      "nameBn": "জুলাই গণঅভ্যুত্থান দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-akheri",
+      "date": "2026-08-12",
+      "nameEn": "Akheri Chahar Somba",
+      "nameBn": "আখেরি চাহার সোম্বা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "muslim"
+    },
+    {
+      "id": "2026-general-milad",
+      "date": "2026-08-26",
+      "nameEn": "Eid-e-Miladunnabi",
+      "nameBn": "ঈদে মিলাদুন্নবী",
+      "type": "general",
+      "isEstimated": true,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-general-janmashtami",
+      "date": "2026-09-04",
+      "nameEn": "Janmashtami",
+      "nameBn": "জন্মাষ্টমী",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-fateha",
+      "date": "2026-09-24",
+      "nameEn": "Fateha-e-Yazdaham",
+      "nameBn": "ফাতেহা ই ইয়াজদাহম",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "muslim"
+    },
+    {
+      "id": "2026-optional-madhu",
+      "date": "2026-09-26",
+      "nameEn": "Madhu Purnima",
+      "nameBn": "মধু পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "buddhist"
+    },
+    {
+      "id": "2026-optional-mahalaya",
+      "date": "2026-10-10",
+      "nameEn": "Mahalaya",
+      "nameBn": "মহালয়া",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-optional-durga-sasthi",
+      "date": "2026-10-18",
+      "nameEn": "Durga Puja (Sasthi)",
+      "nameBn": "দুর্গাপূজা (ষষ্ঠী)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-optional-durga-ashtami",
+      "date": "2026-10-19",
+      "nameEn": "Durga Puja (Ashtami)",
+      "nameBn": "দুর্গাপূজা (অষ্টমী)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-executiveOrder-durga-navami",
+      "date": "2026-10-20",
+      "nameEn": "Durga Puja (Navami)",
+      "nameBn": "দুর্গাপূজা (নবমী)",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-general-durga-dashami",
+      "date": "2026-10-21",
+      "nameEn": "Durga Puja (Bijoya Dashami)",
+      "nameBn": "দুর্গাপূজা (বিজয়া দশমী)",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-executiveOrder-durga-dashami-additional",
+      "date": "2026-10-22",
+      "nameEn": "Durga Puja (additional day)",
+      "nameBn": "দুর্গাপূজা (অতিরিক্ত ছুটি)",
+      "type": "executiveOrder",
+      "isEstimated": false,
+      "source": "mopa-working-october-2026"
+    },
+    {
+      "id": "2026-optional-lakshmi",
+      "date": "2026-10-25",
+      "nameEn": "Lakshmi Puja",
+      "nameBn": "লক্ষ্মীপূজা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-optional-prabarana",
+      "date": "2026-10-25",
+      "nameEn": "Prabarana Purnima",
+      "nameBn": "প্রবারণা পূর্ণিমা",
+      "type": "optional",
+      "isEstimated": true,
+      "source": "mopa-annual-2026",
+      "community": "buddhist"
+    },
+    {
+      "id": "2026-general-revolution",
+      "date": "2026-11-07",
+      "nameEn": "National Revolution and Solidarity Day",
+      "nameBn": "জাতীয় বিপ্লব ও সংহতি দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-november-2026"
+    },
+    {
+      "id": "2026-optional-shyama",
+      "date": "2026-11-08",
+      "nameEn": "Shyama Puja",
+      "nameBn": "শ্যামাপূজা",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "hindu"
+    },
+    {
+      "id": "2026-general-victory",
+      "date": "2026-12-16",
+      "nameEn": "Victory Day",
+      "nameBn": "বিজয় দিবস",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-christmas-before",
+      "date": "2026-12-24",
+      "nameEn": "Christmas Day",
+      "nameBn": "যিশু খ্রিষ্টের জন্মদিন (বড়দিন)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    },
+    {
+      "id": "2026-general-christmas",
+      "date": "2026-12-25",
+      "nameEn": "Christmas Day",
+      "nameBn": "যিশু খ্রিষ্টের জন্মদিন (বড়দিন)",
+      "type": "general",
+      "isEstimated": false,
+      "source": "mopa-annual-2026"
+    },
+    {
+      "id": "2026-optional-christmas-after",
+      "date": "2026-12-26",
+      "nameEn": "Christmas Day",
+      "nameBn": "যিশু খ্রিষ্টের জন্মদিন (বড়দিন)",
+      "type": "optional",
+      "isEstimated": false,
+      "source": "mopa-annual-2026",
+      "community": "christian",
+      "notesEn": "Day before or after the festival.",
+      "notesBn": "উৎসবের আগের বা পরের দিন।"
+    }
+  ],
+  "workingDays": [
+    {
+      "date": "2026-05-23",
+      "nameEn": "Office opening by government order",
+      "nameBn": "সরকারি আদেশে অফিস খোলা",
+      "source": "mopa-eid-adha-extra-2026"
+    },
+    {
+      "date": "2026-05-24",
+      "nameEn": "Office opening by government order",
+      "nameBn": "সরকারি আদেশে অফিস খোলা",
+      "source": "mopa-eid-adha-extra-2026"
+    },
+    {
+      "date": "2026-10-17",
+      "nameEn": "Office opening by government order",
+      "nameBn": "সরকারি আদেশে অফিস খোলা",
+      "source": "mopa-working-october-2026"
+    }
+  ]
+}
