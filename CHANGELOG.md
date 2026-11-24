@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Flutter demo migrated to `material_ui`/`cupertino_ui` (Flutter 3.47+).
+- CI validates the demo on Flutter 3.50.1. No package API changes.
+
 ## 0.1.0
 
 - Offline 2026/2027 MOPA data with sources and uncertainty.
